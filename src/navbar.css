@@ -1,0 +1,120 @@
+/* Navbar Container */
+.navbar {
+  background-color: rgb(33, 53, 71); /* Dark background color */
+  padding: 10px 20px; /* Spacing around the navbar */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  position: fixed; /* Fix the navbar to the top of the viewport */
+  top: 0; /* Align to the top */
+  left: 0; /* Start from the left */
+  width: 100%; /* Full width of the viewport */
+  z-index: 10; /* Ensure it stays above other elements */
+  display: flex;
+  align-items: center; /* Vertically center all navbar elements */
+  justify-content: space-between;
+}
+
+/* Navbar List */
+.nav-list {
+  list-style: none; /* Remove bullet points */
+  margin: 0;
+  padding: 0;
+  display: flex; /* Align items horizontally */
+  justify-content: center; /* Center items horizontally */
+  align-items: center; /* Center items vertically */
+}
+
+/* Navbar Items */
+.nav-item {
+  position: relative; /* For dropdown positioning */
+  margin: 0 15px; /* Spacing between nav items */
+}
+
+/* Navbar Links */
+.nav-link {
+  color: #fff; /* White text */
+  text-decoration: none; /* Remove underline */
+  font-size: 1.1rem; /* Font size for links */
+  padding: 10px 15px; /* Padding inside links */
+  border-radius: 5px; /* Rounded corners */
+  transition: background-color 0.3s, color 0.3s; /* Smooth hover effect */
+  cursor: pointer;
+}
+
+.nav-link:hover {
+  background-color: #4caf50; /* Green hover background */
+  color: #fff; /* Keep text white */
+}
+
+/* Dropdown Menu */
+.nav-dropdown .dropdown-menu {
+  position: absolute; /* Position relative to the parent */
+  top: 100%; /* Below the nav item */
+  left: 0; /* Align to the left of the nav item */
+  background-color: rgb(33, 53, 71); /* Slightly lighter background */
+  padding: 10px 0; /* Add vertical spacing */
+  border-radius: 5px; /* Rounded corners */
+  box-shadow: 0 4px 6px rgb(33, 53, 71); /* Shadow for dropdown */
+  display: none; /* Initially hidden */
+  z-index: 100; /* Ensure it's above other elements */
+}
+
+.nav-dropdown:hover .dropdown-menu {
+  display: block; /* Show dropdown on hover */
+}
+
+/* Dropdown Items */
+.dropdown-item {
+  margin: 0; /* No margin for dropdown items */
+}
+
+.dropdown-link {
+  color: #fff; /* White text */
+  text-decoration: none; /* Remove underline */
+  padding: 10px 20px; /* Spacing inside links */
+  display: block; /* Make links block elements for better spacing */
+  transition: background-color 0.3s, color 0.3s; /* Smooth hover effect */
+}
+
+.dropdown-link:hover {
+  background-color: #4caf50; /* Green hover background */
+  color: #fff; /* Keep text white */
+}
+
+.nav-link a {
+  color: inherit; /* Inherit the color from the parent */
+  text-decoration: none; /* Remove underline */
+}
+
+.nav-link a:hover {
+  color: inherit; /* Keep the hover color from the parent */
+  text-decoration: none; /* Ensure no underline appears on hover */
+}
+
+/* Logo Container */
+.logo-container {
+  display: flex;
+  align-items: center; /* Vertically center the logo with other navbar items */
+  margin-right: 40px; /* Add space between logo and the nav-list */
+}
+
+.logo {
+  height: 40px; /* Adjust the size of the logo */
+  cursor: pointer; /* Make it clickable */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .nav-list {
+    flex-direction: column; /* Stack items vertically on small screens */
+    align-items: flex-start; /* Align to the left */
+  }
+
+  .nav-item {
+    margin: 10px 0; /* Add vertical spacing between items */
+  }
+
+  .nav-link {
+    width: 100%; /* Full-width links for easier tapping */
+    text-align: left; /* Align text to the left */
+  }
+}

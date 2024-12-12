@@ -1,0 +1,77 @@
+/* Parent container for the grid */
+.recipe-list-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px; /* Space between items */
+    justify-content: center; /* Center all cards */
+  }
+  
+  /* Individual recipe container */
+  .recipe-container {
+    flex: 1 1 calc(33.33% - 16px); /* Three items per row */
+    max-width: calc(33.33% - 16px); /* Ensure consistent size */
+    height: 250px;
+    text-align: center;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    background-color: #e0d4d4da;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Align items vertically */
+}
+  
+  /* Fix image sizes */
+  .recipe-image {
+    width: 100%;
+    min-width: 250px;
+    height: 200px; /* Ensures all images are the same height */
+    object-fit: cover; /* Prevents distortion */
+    border-radius: 5px;
+    margin-bottom: 10px;
+  }
+  
+  /* Title styling */
+  .recipe-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-top: auto; /* Pushes the title to the bottom */
+  }
+  
+  /* Hover effect for better UI */
+  .recipe-container:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  .spinner-container {
+    display: flex;
+    padding-left: 750px;
+    align-content: center;
+    align-items: center;
+    height: 100vh; /* Full viewport height */
+  }
+  
+  /* Ensure responsive design */
+  @media (max-width: 1024px) {
+    .recipe-container {
+      flex: 1 1 calc(33.33% - 16px); /* Three items per row on medium screens */
+      max-width: calc(33.33% - 16px);
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .recipe-container {
+      flex: 1 1 calc(50% - 16px); /* Two items per row on small screens */
+      max-width: calc(50% - 16px);
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .recipe-container {
+      flex: 1 1 calc(100% - 16px); /* Full-width cards on extra small screens */
+      max-width: calc(100% - 16px);
+    }
+  }
+  

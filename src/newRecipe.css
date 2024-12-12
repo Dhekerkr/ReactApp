@@ -1,0 +1,147 @@
+/* Body to prevent horizontal scrolling */
+body {
+    overflow-x: hidden;
+}
+.all{
+    padding-top: 50px;
+}
+
+/* Container for the entire form */
+.new-recipe-container {
+    width: 100%; /* Full width */
+    max-width: 500px; /* Set a max-width for larger screens */
+    margin: 10px auto; /* Center the form container */
+    padding: 30px; /* Increased padding */
+
+    padding-right: 60px;
+    align-items: center;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Form title */
+.new-recipe-container h2 {
+    text-align: center;
+    font-size: 2rem; /* Increased font size */
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Form field styling */
+.new-recipe-container label {
+    display: block;
+    font-size: 1.1rem; /* Slightly larger label */
+    color: #555;
+    margin-bottom: 10px; /* Increased margin for better spacing */
+    font-weight: bold;
+}
+
+.new-recipe-container input,
+.new-recipe-container select,
+.new-recipe-container textarea {
+    width: 100%;
+    padding: 15px; /* Increased padding for bigger fields */
+    font-size: 1.2rem; /* Increased font size */
+    border: 1px solid #ccc;
+    border-radius: 8px; /* Rounded corners */
+    margin-bottom: 20px;
+    background-color: #fff;
+    transition: border-color 0.3s ease;
+}
+
+.new-recipe-container input:focus,
+.new-recipe-container select:focus,
+.new-recipe-container textarea:focus {
+    border-color: #4caf50;
+    outline: none;
+}
+
+/* Add Ingredient Button */
+.new-recipe-container button[type="button"] {
+    margin-top: -10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 12px 20px; /* Larger padding */
+    border-radius: 8px; /* Rounded corners */
+    font-size: 1rem; /* Larger font */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.new-recipe-container button[type="button"]:hover {
+    background-color: #0056b3;
+}
+
+/* Submit Button */
+.new-recipe-container button[type="submit"] {
+    width: 100%;
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    padding: 12px 20px; /* Larger padding */
+    font-size: 1.2rem; /* Larger font size */
+    border-radius: 8px; /* Rounded corners */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.new-recipe-container button[type="submit"]:hover {
+    background-color: #388e3c;
+}
+
+/* Message styling */
+.new-recipe-container p {
+    text-align: center;
+    font-size: 1.1rem; /* Larger text for messages */
+    color: #555;
+    margin-top: 20px;
+}
+
+.new-recipe-container p.error {
+    color: #e74c3c;
+}
+
+.new-recipe-container p.success {
+    color: #4caf50;
+}
+
+/* Ingredient fields */
+.new-recipe-container .ingredient-field {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px; /* More space between ingredients */
+}
+
+.new-recipe-container .ingredient-field input {
+    flex: 1;
+    margin-right: 10px;
+    padding: 12px; /* Larger input fields */
+    font-size: 1.1rem; /* Larger font size */
+}
+
+/* Custom spinner */
+.custom-spin .ant-spin-dot-item {
+    background-color: blue; /* Change this to your desired color */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .new-recipe-container {
+        padding: 20px; /* Reduce padding for smaller screens */
+        width: 90%; /* Allow it to take more space on smaller screens */
+    }
+
+    .new-recipe-container h2 {
+        font-size: 1.6rem; /* Slightly smaller title for mobile */
+    }
+
+    .new-recipe-container input,
+    .new-recipe-container select,
+    .new-recipe-container textarea,
+    .new-recipe-container button {
+        font-size: 1rem; /* Adjust input/button sizes for mobile */
+    }
+}

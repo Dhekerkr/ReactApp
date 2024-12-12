@@ -1,0 +1,120 @@
+/* Layout container */
+.profil-layout {
+    display: flex;
+    align-items: flex-start; /* Align items at the top */
+    gap: 20px;
+    padding: 20px;
+  }
+  
+  /* Spinner container: Full-page spinner in the center */
+  .spinner-container {
+    display: flex;
+    padding-left: 750px;
+    
+    align-items: center;
+    height: 100vh; /* Full viewport height */
+  }
+  
+  /* Left section: User icon and name */
+  .profil-header {
+    opacity: 90%;
+    flex: 0 0 250px; /* Fixed width for the left section */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: #dad3d3;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .user-icon {
+    font-size: 7rem; /* Make the icon larger */
+    color: #4caf50;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    margin-bottom: 20px;
+  }
+  
+  .user-icon:hover {
+    transform: scale(1.2); /* Slight zoom effect */
+  }
+  
+  .profil-header h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-top: 10px;
+    text-align: center;
+  }
+  
+  /* Center section: Recipes */
+  .recipes-section {
+    flex: 1; /* Take the remaining space */
+    padding: 20px;
+  }
+  
+  .recipes-section h4 {
+    font-size: 1.8rem;
+    color: #4caf50;
+    margin-bottom: 15px;
+    text-align: center;
+  }
+  
+  .recipe-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Three cards per row */
+    gap: 20px;
+    justify-items: center; /* Center the cards */
+  }
+  
+  .recipe-card {
+    opacity: 90%;
+    background-color: #dad3d3;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 5px;
+    text-align: center;
+    width: 100%; /* Full width within grid */
+    max-width: 300px;
+    position: relative;
+  }
+  
+  .recipe-card h5 {
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .recipe-card img {
+    width: 100%;
+    height: 200px; /* Fixed height for consistency */
+    object-fit: cover; /* Ensure the image fills the space without distortion */
+    border-radius: 6px;
+    margin-bottom: 10px;
+  }
+  
+  .recipe-actions {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 10px;
+  }
+  
+  .recipe-icon {
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: transform 0.2s ease, color 0.2s ease;
+  }
+  
+  .recipe-icon:hover {
+    transform: scale(1.2);
+  }
+  
+  .edit-icon {
+    color: #1890ff;
+  }
+  
+  .delete-icon {
+    color: #e74c3c;
+  }
+  

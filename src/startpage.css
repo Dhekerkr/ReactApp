@@ -1,0 +1,54 @@
+/* Conteneur principal */
+
+.home-container {
+    position: relative;
+    justify-content: center;   /* Centers horizontally */
+    align-items: center;
+    width: 100%;
+    height: 100vh; /* S'assure que la page prend toute la hauteur */
+    overflow: hidden;
+    padding-left: 1px;
+    
+  }
+  
+  /* Icône en haut à droite */
+  .top-right-icon {
+    position: absolute;
+    top: 20px; /* Distance depuis le haut */
+    right: 20px; /* Distance depuis la droite */
+    cursor: pointer;
+    z-index: 1000; /* S'assure que l'icône est au-dessus des autres éléments */
+    transition: transform 0.3s ease;
+  }
+  
+  .top-right-icon:hover {
+    transform: scale(1.1); /* Agrandit légèrement l'icône au survol */
+  }
+  
+  /* Contenu principal */
+  .home-content {
+    text-align: center;
+    margin-top: 100px; /* Ajustez selon vos besoins */
+  }
+  
+  .home-logo {
+    width: 150px;
+    margin-bottom: 20px;
+  }
+  
+  .home-title {
+    font-size: 2rem;
+    color: #333;
+  }
+  
+  .home-description {
+    font-size: 1.2rem;
+    color: #666;
+  }
+  
+  .join-link {
+    color: #4CAF50;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  
